@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Elas no Trabalho · Mulheres e desigualdade de gênero</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbf8f6;--bg2:#f3ece8;--card:#ffffff;--tx:#1d1a22;--mut:#6b6572;--ac:#c2410c;--ac2:#7c3aed;--bd:#e8dfda;--g:linear-gradient(120deg,#f97316,#db2777,#7c3aed);color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121016;--bg2:#1a1720;--card:#201c28;--tx:#f4f0f6;--mut:#a69fb0;--ac:#fb923c;--ac2:#a78bfa;--bd:#2f2a38;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121016;--bg2:#1a1720;--card:#201c28;--tx:#f4f0f6;--mut:#a69fb0;--ac:#fb923c;--ac2:#a78bfa;--bd:#2f2a38;color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 17px/1.65 Inter,system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.1;margin:0}
+nav{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:14px 5vw;padding-top:calc(14px + env(safe-area-inset-top,0px));background:color-mix(in srgb,var(--bg) 78%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:border-color .4s}
+nav.s{border-color:var(--bd)}
+.logo{font-family:Fraunces,serif;font-weight:700;font-size:20px;color:var(--tx);text-decoration:none}
+.logo span{background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent}
+nav ul{display:flex;gap:6px;list-style:none;margin:0;padding:0}
+nav a.l{color:var(--mut);text-decoration:none;font-size:14px;font-weight:500;padding:8px 12px;border-radius:99px;transition:.3s}
+nav a.l:hover,nav a.l.on{color:var(--tx);background:var(--bg2)}
+@media(max-width:820px){nav ul{display:none}}
+#bar{position:fixed;top:0;left:0;height:3px;width:0;background:var(--g);z-index:30}
+section{padding:110px 6vw;max-width:1180px;margin:0 auto}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;position:relative;max-width:none;padding-top:130px}
+.hero>*{max-width:1000px}
+.blob{position:absolute;border-radius:50%;filter:blur(80px);opacity:.35;z-index:-1;animation:fl 14s ease-in-out infinite alternate}
+.b1{width:420px;height:420px;background:#f97316;right:6%;top:14%}
+.b2{width:360px;height:360px;background:#7c3aed;right:22%;bottom:8%;animation-delay:-5s}
+@keyframes fl{to{transform:translate(-50px,40px) scale(1.15)}}
+.tag{display:inline-block;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ac);margin-bottom:18px}
+h1{font-size:clamp(42px,8vw,96px);letter-spacing:-.02em}
+h1 em{font-style:italic;background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:clamp(18px,2.2vw,22px);color:var(--mut);max-width:620px;margin:26px 0 36px}
+.btn{display:inline-block;background:var(--tx);color:var(--bg);padding:15px 28px;border-radius:99px;text-decoration:none;font-weight:600;font-size:15px;transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 14px 30px -10px var(--ac2)}
+h2{font-size:clamp(32px,5vw,56px);letter-spacing:-.015em;margin-bottom:18px}
+p.sub{color:var(--mut);max-width:640px;margin:0 0 44px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:22px;padding:28px;transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s,border-color .3s;position:relative;overflow:hidden}
+.card:hover{transform:translateY(-8px);box-shadow:0 24px 50px -24px var(--ac2);border-color:var(--ac2)}
+.card h3{font-size:22px;margin:10px 0 8px}
+.card p{margin:0;color:var(--mut);font-size:15.5px}
+.ic{font-size:28px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;margin-bottom:22px}
+.stat{padding:30px;border-radius:22px;background:var(--bg2)}
+.stat b{display:block;font-family:Fraunces,serif;font-size:54px;background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1}
+.stat span{color:var(--mut);font-size:15px}
+.alt{max-width:none;background:var(--bg2)}
+.alt>.in{max-width:1180px;margin:0 auto}
+.laws{display:flex;flex-direction:column;gap:12px}
+.law{background:var(--card);border:1px solid var(--bd);border-radius:20px;overflow:hidden}
+.law button{all:unset;box-sizing:border-box;width:100%;padding:22px 26px;display:flex;justify-content:space-between;gap:16px;align-items:center;cursor:pointer;font-weight:600;font-size:18px}
+.law button:focus-visible{outline:2px solid var(--ac2);outline-offset:-2px}
+.law button i{font-style:normal;font-size:24px;color:var(--ac);transition:transform .4s}
+.law.o button i{transform:rotate(45deg)}
+.law .bd{display:grid;grid-template-rows:0fr;transition:grid-template-rows .5s cubic-bezier(.2,.8,.2,1)}
+.law.o .bd{grid-template-rows:1fr}
+.law .bd div{overflow:hidden}
+.law .bd p{margin:0;padding:0 26px 24px;color:var(--mut)}
+.quote{font-family:Fraunces,serif;font-size:clamp(24px,3.6vw,40px);line-height:1.25;max-width:860px}
+.steps{counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:44px}
+.steps .card::before{counter-increment:s;content:"0" counter(s);font-family:Fraunces,serif;font-size:44px;color:var(--ac2);opacity:.45}
+.crit .card{display:flex;gap:16px;align-items:flex-start}
+.crit .card h3{margin:0 0 4px;font-size:19px}
+.crit .ic{background:var(--bg2);width:52px;height:52px;border-radius:16px;display:grid;place-items:center;flex:none;font-size:24px}
+.pam{margin-top:18px;background:var(--g);color:#fff;border-radius:26px;padding:38px;display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:center}
+.pam h3{font-size:28px}.pam p{margin:6px 0 0;opacity:.92;max-width:520px}
+footer{text-align:center;padding:50px 6vw 70px;color:var(--mut);font-size:14px;border-top:1px solid var(--bd)}
+.rv{opacity:0;transform:translateY(40px) scale(.98);filter:blur(6px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1),filter .9s}
+.rv.in{opacity:1;transform:none;filter:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
+.tabs button{all:unset;box-sizing:border-box;cursor:pointer;padding:12px 22px;border-radius:99px;border:1px solid var(--bd);background:var(--card);font-weight:600;font-size:15px;transition:.35s}
+.tabs button:hover{border-color:var(--ac2)}
+.tabs button:focus-visible{outline:2px solid var(--ac2);outline-offset:2px}
+.tabs button.on{background:var(--tx);color:var(--bg);border-color:var(--tx);transform:translateY(-2px)}
+.pn{display:none}
+.pn.on{display:block;animation:pin .7s cubic-bezier(.2,.8,.2,1)}
+@keyframes pin{from{opacity:0;transform:translateY(26px);filter:blur(6px)}}
+.pn .big{font-family:Fraunces,serif;font-size:clamp(22px,3vw,32px);line-height:1.3;max-width:820px;margin:0 0 28px}
+.pn ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:16px}
+.pn li{background:var(--card);border:1px solid var(--bd);border-radius:20px;padding:22px 24px;color:var(--mut);font-size:15.5px;transition:transform .4s,border-color .3s}
+.pn li:hover{transform:translateY(-5px);border-color:var(--ac2)}
+.pn li b{display:block;color:var(--tx);font-family:Fraunces,serif;font-size:19px;margin-bottom:6px}
+.note{margin-top:22px;font-size:13.5px;color:var(--mut)}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;filter:none;transition:none}.blob{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<nav id="nav">
+<a class="logo" href="#inicio">Elas<span>.</span>no trabalho</a>
+<ul>
+<li><a class="l" href="#mercado">Mercado de Trabalho</a></li>
+<li><a class="l" href="#leis">Leis</a></li>
+<li><a class="l" href="#justica">Justiça social</a></li>
+<li><a class="l" href="#barreiras">Derrubando barreiras</a></li>
+<li><a class="l" href="#aprofunde">Aprofunde</a></li>
+</ul>
+</nav>
+
+<section class="hero" id="inicio">
+<div class="blob b1"></div><div class="blob b2"></div>
+<span class="tag rv">Trabalho em grupo · Pesquisa</span>
+<h1 class="rv d1">Mulheres no <em>mercado de trabalho</em> e a desigualdade de gênero</h1>
+<p class="lead rv d2">Uma pesquisa sobre leis, mercado, justiça social e os caminhos para derrubar as barreiras que ainda separam mulheres e homens no mundo do trabalho.</p>
+<div class="rv d3"><a class="btn" href="#mercado">Começar a leitura ↓</a></div>
+</section>
+
+<section id="mercado">
+<span class="tag rv">01 · Mercado de Trabalho</span>
+<h2 class="rv">Onde a desigualdade aparece</h2>
+<p class="sub rv">Mesmo com mais escolaridade, as mulheres seguem encontrando diferenças de salário, de cargos e de oportunidades. Os números abaixo são aproximados; confira as fontes atualizadas (IBGE e Ministério do Trabalho) antes de apresentar.</p>
+<div class="stats">
+<div class="stat rv"><b>~20%</b><span>é a diferença média de salário entre mulheres e homens em empresas com 100+ funcionários</span></div>
+<div class="stat rv d1"><b>+ estudo</b><span>mulheres têm, em média, mais anos de estudo que os homens</span></div>
+<div class="stat rv d2"><b>2×</b><span>mais tempo em afazeres domésticos e cuidados não remunerados</span></div>
+</div>
+<div class="grid">
+<div class="card rv"><div class="ic">📉</div><h3>Diferença salarial</h3><p>Mulheres recebem menos pela mesma função ou por funções equivalentes, e a diferença cresce nos cargos mais altos.</p></div>
+<div class="card rv d1"><div class="ic">🪜</div><h3>Teto de vidro</h3><p>Barreira invisível que limita o acesso feminino a cargos de liderança e de diretoria.</p></div>
+<div class="card rv d2"><div class="ic">👶</div><h3>Dupla jornada</h3><p>A divisão desigual do trabalho de casa e do cuidado com filhos reduz o tempo e a progressão na carreira.</p></div>
+<div class="card rv d3"><div class="ic">🧩</div><h3>Segregação de áreas</h3><p>Mulheres ainda são minoria em áreas como tecnologia e engenharia, e maioria em áreas de cuidado, com salários menores.</p></div>
+</div>
+</section>
+
+<section class="alt" id="leis"><div class="in">
+<span class="tag rv">02 · Leis</span>
+<h2 class="rv">O que a lei garante</h2>
+<p class="sub rv">Clique para abrir cada tema. A legislação existe, mas o desafio é fazer ela funcionar na prática.</p>
+<div class="laws">
+<div class="law rv"><button aria-expanded="false">Constituição Federal de 1988 <i>+</i></button><div class="bd"><div><p>Estabelece a igualdade entre homens e mulheres e proíbe diferença de salários, de exercício de funções e de critério de admissão por motivo de sexo (art. 5º, I e art. 7º, XXX).</p></div></div></div>
+<div class="law rv d1"><button aria-expanded="false">Lei nº 14.611/2023 – Igualdade Salarial <i>+</i></button><div class="bd"><div><p>Garante igualdade de remuneração para mulheres e homens que exercem a mesma função e obriga empresas com 100 ou mais empregados a publicar relatórios de transparência salarial.</p></div></div></div>
+<div class="law rv d2"><button aria-expanded="false">Lei nº 9.029/1995 – Proibição de práticas discriminatórias <i>+</i></button><div class="bd"><div><p>Proíbe exigir atestado de gravidez ou esterilização para admissão ou permanência no emprego.</p></div></div></div>
+<div class="law rv d3"><button aria-expanded="false">CLT – Proteção à maternidade <i>+</i></button><div class="bd"><div><p>Prevê licença-maternidade, estabilidade da gestante e intervalos para amamentação, além de proibir discriminação por casamento ou gravidez.</p></div></div></div>
+<div class="law rv"><button aria-expanded="false">Lei nº 14.457/2022 – Emprega + Mulheres <i>+</i></button><div class="bd"><div><p>Cria medidas de apoio à parentalidade, à qualificação e ao retorno das mulheres ao mercado, e de prevenção ao assédio no trabalho.</p></div></div></div>
+</div>
+</div></section>
+
+<section id="justica">
+<span class="tag rv">03 · Justiça social</span>
+<h2 class="rv">Igualdade não é favor, é direito</h2>
+<p class="quote rv d1">Justiça social é garantir que gênero, raça e classe não decidam quem tem acesso a bons empregos, salários justos e voz nas decisões.</p>
+<div class="grid" style="margin-top:44px">
+<div class="card rv"><div class="ic">⚖️</div><h3>Equidade</h3><p>Tratar pessoas de forma justa, reconhecendo que os pontos de partida são diferentes.</p></div>
+<div class="card rv d1"><div class="ic">🌈</div><h3>Interseccionalidade</h3><p>Mulheres negras, indígenas, com deficiência e periféricas enfrentam desigualdades somadas.</p></div>
+<div class="card rv d2"><div class="ic">💰</div><h3>Autonomia econômica</h3><p>Renda própria dá liberdade, segurança e poder de decisão sobre a própria vida.</p></div>
+</div>
+</section>
+
+<section class="alt" id="barreiras"><div class="in">
+<span class="tag rv">04 · Derrubando barreiras</span>
+<h2 class="rv">Caminhos para mudar essa realidade</h2>
+<p class="sub rv">A mudança depende de governos, empresas e de cada pessoa.</p>
+<div class="steps">
+<div class="card rv"><h3>Transparência</h3><p>Empresas divulgando salários e metas de equidade.</p></div>
+<div class="card rv d1"><h3>Corresponsabilidade</h3><p>Dividir o trabalho doméstico e o cuidado, com licença-paternidade e creches acessíveis.</p></div>
+<div class="card rv d2"><h3>Educação e mentoria</h3><p>Incentivar meninas em ciência e tecnologia e criar redes de apoio profissional.</p></div>
+<div class="card rv d3"><h3>Combate ao assédio</h3><p>Canais de denúncia seguros e punição efetiva.</p></div>
+</div>
+</div></section>
+
+<section id="aprofunde">
+<span class="tag rv">Aprofunde a pesquisa</span>
+<h2 class="rv">Os quatro eixos em detalhe</h2>
+<p class="sub rv">Escolha um tema para ver mais informações, exemplos e dados.</p>
+<div class="tabs rv" role="tablist">
+<button class="on" data-t="p1" role="tab">⚖️ Leis</button>
+<button data-t="p2" role="tab">💼 Mercado de Trabalho</button>
+<button data-t="p3" role="tab">🤝 Justiça social</button>
+<button data-t="p4" role="tab">🧱 Derrubando barreiras</button>
+</div>
+<div class="pn on" id="p1">
+<p class="big">O Brasil tem uma base legal forte contra a discriminação de gênero no trabalho. O desafio é fiscalizar e aplicar.</p>
+<ul>
+<li><b>Constituição de 1988</b>Art. 5º, I: homens e mulheres são iguais em direitos e obrigações. Art. 7º, XXX: proíbe diferença de salário, função e admissão por sexo.</li>
+<li><b>CLT, art. 461</b>Quem faz trabalho de igual valor na mesma empresa deve receber o mesmo salário, sem distinção de sexo.</li>
+<li><b>Lei 14.611/2023</b>Igualdade salarial: empresas com 100+ empregados publicam relatórios de transparência salarial, com multa em caso de descumprimento.</li>
+<li><b>Lei 9.029/1995</b>Proíbe exigir teste ou atestado de gravidez e esterilização para contratar ou manter a trabalhadora.</li>
+<li><b>Maternidade</b>Licença-maternidade de 120 dias (180 no programa Empresa Cidadã) e estabilidade da gestante desde a confirmação da gravidez até 5 meses após o parto.</li>
+<li><b>Lei 14.457/2022</b>Programa Emprega + Mulheres: apoio à parentalidade, qualificação e prevenção ao assédio no ambiente de trabalho.</li>
+</ul>
+</div>
+<div class="pn" id="p2">
+<p class="big">As mulheres são mais da metade da população, mas ainda ocupam menos espaço e ganham menos no mercado.</p>
+<ul>
+<li><b>Participação</b>Cerca de 53% das mulheres em idade de trabalhar estão no mercado, contra cerca de 73% dos homens.</li>
+<li><b>Remuneração</b>Em média, mulheres ganham em torno de 20% a menos que homens, mesmo com mais anos de estudo.</li>
+<li><b>Liderança</b>São cerca de 4 em cada 10 nos cargos gerenciais, e muito menos nos níveis de diretoria e conselhos.</li>
+<li><b>Trabalho doméstico</b>Mais de 90% dos trabalhadores domésticos são mulheres, com alta informalidade e baixos salários.</li>
+<li><b>Dupla jornada</b>Elas dedicam quase o dobro do tempo dos homens aos afazeres da casa e ao cuidado de pessoas.</li>
+<li><b>Maternidade e carreira</b>Muitas mulheres reduzem a jornada ou saem do emprego após ter filhos, por falta de creches e de apoio.</li>
+</ul>
+<p class="note">Valores aproximados, com base em IBGE e relatórios de transparência salarial. Confira os números mais recentes antes de apresentar.</p>
+</div>
+<div class="pn" id="p3">
+<p class="big">Justiça social é garantir oportunidades iguais e combater as causas históricas da desigualdade.</p>
+<ul>
+<li><b>Herança histórica</b>Durante séculos, mulheres foram afastadas da educação, da política e da renda própria. Só votaram no Brasil a partir de 1932.</li>
+<li><b>Interseccionalidade</b>Mulheres negras têm os menores rendimentos e as maiores taxas de informalidade e desemprego.</li>
+<li><b>Trabalho de cuidado</b>O cuidado não remunerado sustenta a economia, mas quase não é reconhecido nem dividido.</li>
+<li><b>Violência e assédio</b>O assédio moral e sexual afasta mulheres de empregos e promoções. Denúncias: Ligue 180 e Ministério Público do Trabalho.</li>
+<li><b>Equidade</b>Tratar de forma diferente quem parte de situações diferentes, para chegar à igualdade real.</li>
+<li><b>Políticas públicas</b>Creches, educação integral, crédito para empreendedoras e ações afirmativas.</li>
+</ul>
+</div>
+<div class="pn" id="p4">
+<p class="big">Mudar essa realidade exige ação de governos, empresas, escolas e de cada pessoa.</p>
+<ul>
+<li><b>Empresas</b>Publicar salários por cargo, definir metas de liderança feminina e revisar processos de promoção.</li>
+<li><b>Governo</b>Fiscalizar a lei de igualdade salarial, ampliar creches e licença-paternidade e financiar qualificação.</li>
+<li><b>Família e corresponsabilidade</b>Dividir tarefas da casa e cuidado com filhos de forma igual entre os adultos.</li>
+<li><b>Educação</b>Incentivar meninas em ciência, tecnologia e matemática e discutir gênero já na escola.</li>
+<li><b>Mentoria e redes</b>Conectar mulheres a líderes, grupos de apoio e programas de carreira.</li>
+<li><b>Você pode agir</b>Informar-se, denunciar discriminação, apoiar colegas e divulgar o que aprendeu em vídeos e panfletos.</li>
+</ul>
+</div>
+<div style="margin-top:40px"><a class="btn" href="#inicio">Voltar ao topo ↑</a></div>
+</section>
+
+<footer>Feito por Gabriel Pereira N°13, Estevan N°10, Felipe N°11, Bryan Rossini N°5, Caio Shuengue N°7, Jonas G. N°22</footer>
+
+<script>
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+const bar=document.getElementById('bar'),nav=document.getElementById('nav');
+addEventListener('scroll',()=>{const h=document.documentElement;bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';nav.classList.toggle('s',h.scrollTop>20)},{passive:true});
+const links=[...document.querySelectorAll('a.l')];
+const so=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+x.target.id))}),{rootMargin:'-45% 0px -50% 0px'});
+document.querySelectorAll('section[id]').forEach(s=>so.observe(s));
+document.querySelectorAll('.tabs button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.tabs button,.pn').forEach(x=>x.classList.remove('on'));b.classList.add('on');document.getElementById(b.dataset.t).classList.add('on')}));
+document.querySelectorAll('.law button').forEach(b=>b.addEventListener('click',()=>{const l=b.parentElement,o=l.classList.toggle('o');b.setAttribute('aria-expanded',o)}));
+</script>
+</body>
+</html>
